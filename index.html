@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moussa Recycling City Tours — Cultural Tours in Cairo, Egypt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --terracotta: #C4704B;
+  --terracotta-dark: #A85A3A;
+  --sand: #E8D5B7;
+  --sand-light: #F5EDE0;
+  --olive: #5C6B4F;
+  --olive-dark: #3D4A33;
+  --cream: #FDF8F0;
+  --charcoal: #2C2C2C;
+  --warm-gray: #6B6560;
+  --white: #FFFFFF;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+  --radius: 12px;
+  --radius-lg: 20px;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--cream);
+  color: var(--charcoal);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { text-decoration: none; color: inherit; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Navigation */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(253, 248, 240, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(196, 112, 75, 0.1);
+  transition: var(--transition);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--terracotta-dark);
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--warm-gray);
+  transition: var(--transition);
+}
+
+.nav-links a:hover { color: var(--terracotta); }
+
+.nav-cta {
+  background: var(--terracotta);
+  color: var(--white) !important;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-cta:hover { background: var(--terracotta-dark); }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(44,44,44,0.5) 0%, rgba(44,44,44,0.3) 50%, rgba(44,44,44,0.6) 100%);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: var(--white);
+  padding: 0 24px;
+  max-width: 800px;
+}
+
+.hero-eyebrow {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  opacity: 0.9;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--terracotta);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--terracotta-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.15);
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(8px);
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  color: var(--white);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.7;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+/* Section Styles */
+section { padding: 100px 0; }
+
+.section-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.section-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--charcoal);
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--warm-gray);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Tours Grid */
+.tours { background: var(--white); }
+
+.tours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 32px;
+}
+
+.tour-card {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition);
+  border: 1px solid rgba(196, 112, 75, 0.08);
+}
+
+.tour-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.tour-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.tour-body {
+  padding: 28px;
+}
+
+.tour-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--sand-light);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.tour-title {
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+  color: var(--charcoal);
+}
+
+.tour-text {
+  font-size: 0.95rem;
+  color: var(--warm-gray);
+  margin-bottom: 16px;
+}
+
+.tour-highlights {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tour-highlights li {
+  font-size: 0.8rem;
+  background: var(--sand-light);
+  color: var(--olive-dark);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* Gallery */
+.gallery { background: var(--sand-light); }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 16px;
+}
+
+.gallery-item {
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+.gallery-item:nth-child(2) { grid-column: span 1; }
+.gallery-item:nth-child(3) { grid-column: span 1; }
+.gallery-item:nth-child(4) { grid-column: span 2; }
+
+@media (max-width: 768px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+  .gallery-item:nth-child(2) { grid-column: span 1; }
+  .gallery-item:nth-child(3) { grid-column: span 1; }
+  .gallery-item:nth-child(4) { grid-column: span 2; }
+}
+
+/* About */
+.about { background: var(--white); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.about-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.about-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.about-content h2 {
+  font-size: 2.25rem;
+  margin-bottom: 20px;
+  color: var(--charcoal);
+}
+
+.about-content p {
+  color: var(--warm-gray);
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
+
+.about-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--sand);
+}
+
+.stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--terracotta);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--warm-gray);
+}
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-stats { gap: 24px; }
+}
+
+/* Testimonials */
+.testimonials { background: var(--olive-dark); color: var(--white); }
+
+.testimonials .section-title { color: var(--white); }
+.testimonials .section-subtitle { color: rgba(255,255,255,0.7); }
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.testimonial-card {
+  background: rgba(255,255,255,0.08);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.testimonial-stars {
+  color: #F4C430;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  opacity: 0.95;
+  font-style: italic;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.testimonial-source {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* Contact */
+.contact { background: var(--cream); }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.contact-info h2 {
+  font-size: 2.25rem;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  color: var(--warm-gray);
+  margin-bottom: 32px;
+  font-size: 1.05rem;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.contact-method:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateX(4px);
+}
+
+.contact-method-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--sand-light);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.contact-method-label {
+  font-size: 0.8rem;
+  color: var(--warm-gray);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-method-value {
+  font-weight: 500;
+  color: var(--charcoal);
+}
+
+.contact-form {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-md);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--charcoal);
+}
+
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--sand);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: var(--cream);
+  transition: var(--transition);
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--terracotta);
+  box-shadow: 0 0 0 3px rgba(196, 112, 75, 0.1);
+}
+
+.form-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: var(--white);
+  width: 100%;
+  justify-content: center;
+  font-size: 1.05rem;
+  padding: 16px;
+}
+
+.btn-whatsapp:hover {
+  background: #1DA855;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* Footer */
+.footer {
+  background: var(--charcoal);
+  color: var(--white);
+  padding: 60px 0 30px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.footer-desc {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  line-height: 1.7;
+}
+
+.footer-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  opacity: 0.9;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  transition: var(--transition);
+}
+
+.footer-links a:hover { opacity: 1; color: var(--sand); }
+
+.footer-bottom {
+  padding-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+}
+
+/* Floating WhatsApp */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: var(--transition);
+  font-size: 1.75rem;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.5);
+}
+
+/* Scroll animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  section { padding: 60px 0; }
+  .section-header { margin-bottom: 40px; }
+  .tours-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2rem; }
+  .hero-subtitle { font-size: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">Moussa Tours</div>
+    <ul class="nav-links">
+      <li><a href="#tours">Tours</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact" class="nav-cta">Book Now</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline poster="images/img-citadel.jpg">
+    <source src="images/hero-video.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Cultural Tours in Cairo, Egypt</div>
+    <h1>Discover the Soul of Manshyat Nasser</h1>
+    <p class="hero-subtitle">Journey through centuries of history, craftsmanship, and resilience with Moussa — your local guide to Cairo's most extraordinary hidden treasures.</p>
+    <div class="hero-actions">
+      <a href="#tours" class="btn btn-primary">Explore Tours</a>
+      <a href="#contact" class="btn btn-secondary">Book via WhatsApp</a>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll to discover</div>
+</section>
+
+<!-- Tours -->
+<section class="tours" id="tours">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-eyebrow">Our Experiences</div>
+      <h2 class="section-title">Seven Unforgettable Tours</h2>
+      <p class="section-subtitle">Each tour is a doorway into a different world — from ancient pigeon towers to recycling workshops where trash becomes treasure.</p>
+    </div>
+    <div class="tours-grid">
+      <div class="tour-card fade-in">
+        <img class="tour-image" src="images/img-pigeons.jpg" alt="Pigeons flying over historic Cairo building" loading="lazy">
+        <div class="tour-body">
+          <div class="tour-icon">🕊️</div>
+          <h3 class="tour-title">Pigeon Towers Tour</h3>
+          <p class="tour-text">Climb the iconic pigeon towers unique to Manshyat Nasser. Learn about the beloved tradition of pigeon breeding, the different breeds, and the stunning architecture of towers that house 1,000–3,000 pigeons each.</p>
+          <ul class="tour-highlights">
+            <li>Al-Safir Tower</li>
+            <li>1,000–3,000 pigeons</li>
+            <li>Architecture & history</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tour-card fade-in">
+        <img class="tour-image" src="images/img-craftsman.jpg" alt="Craftsman working in traditional workshop" loading="lazy">
+        <div class="tour-body">
+          <div class="tour-icon">♻️</div>
+          <h3 class="tour-title">Recycling Workshops Tour</h3>
+          <p class="tour-text">Visit 5–6 specialized recycling workshops, each mastering a different material — plastic, glass (قزاز), cardboard, aluminum (كنز), and paper. Witness the full chain from collection to finished product.</p>
+          <ul class="tour-highlights">
+            <li>6 workshops</li>
+            <li>Full recycling chain</li>
+            <li>Local craftsmanship</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tour-card fade-in">
+        <img class="tour-image" src="images/img-church.jpg" alt="Historic church in Cairo" loading="lazy">
+        <div class="tour-body">
+          <div class="tour-icon">🌿</div>
+          <h3 class="tour-title">Environmental Protection Association</h3>
+          <p class="tour-text">Operating for ~40 years, this pioneering association creates handmade crafts from aluminum molds and runs vital programs: Positive Health, Hepatitis C treatment, literacy classes, and a Children's Club for early education.</p>
+          <ul class="tour-highlights">
+            <li>~40 years of service</li>
+            <li>Handmade crafts</li>
+            <li>Social impact programs</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tour-card fade-in">
+        <img class="tour-image" src="images/img-monastery.jpg" alt="Monastery of St. Simon in Cairo" loading="lazy">
+        <div class="tour-body">
+          <div class="tour-icon">⛪</div>
+          <h3 class="tour-title">Monastery of St. Simon</h3>
+          <p class="tour-text">Established ~60 years ago, this is one of the largest monasteries in Egypt by congregation. Marvel at stunning architecture carved into the Mokattam hills — one of the most beautiful monasteries in the world.</p>
+          <ul class="tour-highlights">
+            <li>~60 years old</li>
+            <li>Cave churches</li>
+            <li>Spiritual heritage</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tour-card fade-in">
+        <img class="tour-image" src="images/img-tomb.jpg" alt="Ancient tomb with intricate carvings" loading="lazy">
+        <div class="tour-body">
+          <div class="tour-icon">🏛️</div>
+          <h3 class="tour-title">City of the Dead Tour</h3>
+          <p class="tour-text">Explore the unique culture of Cairo's cemetery district. Visit Sultan Barquq Mosque (famous among foreign tourists), Qaitbay Mosque, and meet local craftsmen — glass makers, earring makers, and jewelry artisans.</p>
+          <ul class="tour-highlights">
+            <li>Sultan Barquq Mosque</li>
+            <li>Qaitbay Mosque</li>
+            <li>Local craftsmen</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tour-card fade-in">
+        <img class="tour-image" src="images/img-citadel.jpg" alt="Mosque of Muhammad Ali in Cairo" loading="lazy">
+        <div class="tour-body">
+          <div class="tour-icon">🏰</div>
+          <h3 class="tour-title">Saladin Citadel</h3>
+          <p class="tour-text">Discover the full history of the Citadel — when and why it was built, its strategic importance in Egyptian history, and the breathtaking Islamic architecture of the Mosque of Muhammad Ali within its walls.</p>
+          <ul class="tour-highlights">
+            <li>Full citadel history</li>
+            <li>Strategic importance</li>
+            <li>Islamic architecture</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tour-card fade-in">
+        <img class="tour-image" src="images/img-mosque-cairo.jpg" alt="Historic mosque in Old Cairo" loading="lazy">
+        <div class="tour-body">
+          <div class="tour-icon">🕌</div>
+          <h3 class="tour-title">Religious Complex in Old Cairo</h3>
+          <p class="tour-text">Visit the historic Religious Complex — a symbol of coexistence where churches stand alongside mosques. Learn about the complex's founding, its beautiful churches, and the centuries of religious harmony in this sacred space.</p>
+          <ul class="tour-highlights">
+            <li>Religious harmony</li>
+            <li>Historic churches</li>
+            <li>Cultural coexistence</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-eyebrow">Visual Journey</div>
+      <h2 class="section-title">Glimpses of Cairo</h2>
+      <p class="section-subtitle">A preview of the sights, textures, and moments you'll experience on tour.</p>
+    </div>
+    <div class="gallery-grid fade-in">
+      <div class="gallery-item">
+        <img src="images/img-citadel.jpg" alt="Mosque of Muhammad Ali" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="images/img-pigeons.jpg" alt="Pigeons over Cairo" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="images/img-monastery.jpg" alt="Monastery of St. Simon" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="images/img-qaitbay.jpg" alt="Qaitbay Mosque dome" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image fade-in">
+        <img src="images/img-craftsman.jpg" alt="Local guide in Cairo workshop" loading="lazy">
+      </div>
+      <div class="about-content fade-in">
+        <div class="section-eyebrow">Your Guide</div>
+        <h2>Meet Moussa</h2>
+        <p>Moussa is a proud resident of Manshyat Nasser and a <strong>Level 3 Google Local Guide</strong> — one of the most active and trusted reviewers in the Cairo area. His deep roots in the community and passion for storytelling make every tour an authentic, personal experience.</p>
+        <p>Born and raised in the heart of Cairo's Garbage City, Moussa knows every alley, every workshop, and every family. He doesn't just show you the sights — he introduces you to the people, the history, and the soul of a neighborhood the world rarely sees.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <div class="stat-number">7</div>
+            <div class="stat-label">Unique Tours</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">L3</div>
+            <div class="stat-label">Google Local Guide</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Local Expert</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-eyebrow" style="color: var(--sand);">What Travelers Say</div>
+      <h2 class="section-title">Stories from Our Guests</h2>
+      <p class="section-subtitle">Real experiences from travelers who discovered Cairo through Moussa's eyes.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Moussa showed us a side of Cairo we never would have found on our own. The recycling workshops were incredible — you see the pride in every craftsman's eyes. This is real, authentic travel."</p>
+        <div class="testimonial-author">— Sarah M.</div>
+        <div class="testimonial-source">Google Maps Review</div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"The pigeon towers were unlike anything I've ever seen. Moussa's knowledge of the history and culture made every moment meaningful. Highly recommend for anyone visiting Cairo!"</p>
+        <div class="testimonial-author">— James K.</div>
+        <div class="testimonial-source">Google Maps Review</div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"We did the City of the Dead tour and the Monastery of St. Simon. Both were breathtaking. Moussa is warm, knowledgeable, and clearly loves sharing his community with the world."</p>
+        <div class="testimonial-author">— Amira T.</div>
+        <div class="testimonial-source">Google Maps Review</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info fade-in">
+        <div class="section-eyebrow">Book Your Tour</div>
+        <h2>Start Your Journey</h2>
+        <p>Ready to explore Cairo's hidden gems? Contact Moussa directly via WhatsApp to plan your perfect tour. Whether it's a single experience or a full day of discovery, every tour is tailored to your interests.</p>
+        <div class="contact-methods">
+          <a href="https://wa.me/201283493671" class="contact-method" target="_blank">
+            <div class="contact-method-icon">💬</div>
+            <div>
+              <div class="contact-method-label">WhatsApp</div>
+              <div class="contact-method-value">+20 128 349 3671</div>
+            </div>
+          </a>
+          <a href="mailto:moussapilot@gmail.com" class="contact-method">
+            <div class="contact-method-icon">✉️</div>
+            <div>
+              <div class="contact-method-label">Email</div>
+              <div class="contact-method-value">moussapilot@gmail.com</div>
+            </div>
+          </a>
+          <a href="https://maps.app.goo.gl/vfQMxmyVZytLqwFo9?g_st=aw" class="contact-method" target="_blank">
+            <div class="contact-method-icon">📍</div>
+            <div>
+              <div class="contact-method-label">Location</div>
+              <div class="contact-method-value">Manshyat Nasser, Cairo</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="contact-form fade-in">
+        <form id="booking-form" onsubmit="sendWhatsApp(event)">
+          <div class="form-group">
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-input" id="form-name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tour Interest</label>
+            <select class="form-select" id="form-tour">
+              <option value="">Select a tour</option>
+              <option value="Pigeon Towers Tour">Pigeon Towers Tour</option>
+              <option value="Recycling Workshops Tour">Recycling Workshops Tour</option>
+              <option value="Environmental Protection Association">Environmental Protection Association</option>
+              <option value="Monastery of St. Simon">Monastery of St. Simon</option>
+              <option value="City of the Dead Tour">City of the Dead Tour</option>
+              <option value="Saladin Citadel">Saladin Citadel</option>
+              <option value="Religious Complex in Old Cairo">Religious Complex in Old Cairo</option>
+              <option value="Multiple Tours / Custom Package">Multiple Tours / Custom Package</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Preferred Date</label>
+            <input type="date" class="form-input" id="form-date">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message (optional)</label>
+            <textarea class="form-textarea" id="form-message" placeholder="Any special requests or questions..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-whatsapp">
+            💬 Send via WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Moussa Tours</div>
+        <p class="footer-desc">Authentic cultural tours in the heart of Cairo's Manshyat Nasser. Discover the hidden stories, craftsmanship, and resilience of one of Egypt's most unique communities.</p>
+      </div>
+      <div>
+        <div class="footer-title">Tours</div>
+        <ul class="footer-links">
+          <li><a href="#tours">Pigeon Towers</a></li>
+          <li><a href="#tours">Recycling Workshops</a></li>
+          <li><a href="#tours">St. Simon Monastery</a></li>
+          <li><a href="#tours">City of the Dead</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">More</div>
+        <ul class="footer-links">
+          <li><a href="#tours">Saladin Citadel</a></li>
+          <li><a href="#tours">Religious Complex</a></li>
+          <li><a href="#tours">Environmental Assoc.</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">Connect</div>
+        <ul class="footer-links">
+          <li><a href="https://wa.me/201283493671" target="_blank">WhatsApp</a></li>
+          <li><a href="https://maps.app.goo.gl/vfQMxmyVZytLqwFo9?g_st=aw" target="_blank">Google Maps</a></li>
+          <li><a href="https://youtu.be/AHF2N5aktMY" target="_blank">YouTube</a></li>
+          <li><a href="https://www.facebook.com/share/r/1At19ZurXG/" target="_blank">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Moussa Recycling City Tours. All rights reserved.</span>
+      <span><a href="https://www.adventuresnsunsets.com/cairo-garbage-city/" target="_blank" style="color: var(--sand);">Featured on Adventures & Sunsets</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/201283493671" class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+  💬
+</a>
+
+<script>
+// Scroll fade-in animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// WhatsApp form handler
+function sendWhatsApp(e) {
+  e.preventDefault();
+  const name = document.getElementById('form-name').value;
+  const tour = document.getElementById('form-tour').value;
+  const date = document.getElementById('form-date').value;
+  const message = document.getElementById('form-message').value;
+
+  let text = `Hi Moussa! I'm ${name}`;
+  if (tour) text += ` and I'm interested in the ${tour}`;
+  if (date) text += `. Preferred date: ${date}`;
+  if (message) text += `\n\n${message}`;
+  text += `\n\nPlease let me know availability. Thank you!`;
+
+  const encoded = encodeURIComponent(text);
+  window.open(`https://wa.me/201283493671?text=${encoded}`, '_blank');
+}
+
+// Nav scroll effect
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.nav');
+  if (window.scrollY > 50) {
+    nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
+  } else {
+    nav.style.boxShadow = 'none';
+  }
+});
+</script>
+
+</body>
+</html>
